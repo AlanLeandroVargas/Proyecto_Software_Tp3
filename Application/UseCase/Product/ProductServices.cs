@@ -1,4 +1,5 @@
-﻿using Application.Interfaces;
+﻿using Application.Exceptions;
+using Application.Interfaces;
 using Application.Request;
 using Application.Response;
 using Domain.Entities;
@@ -10,16 +11,24 @@ public class ProductServices : IProductServices
     private readonly IProductCommands _command;
     private readonly IProductQuery _query;
     private readonly ICategoryServices _categoryServices;
+    private readonly ISaleProductServices _saleProductServices;
 
-    public ProductServices(IProductCommands command, IProductQuery query, ICategoryServices categoryServices)
+    public ProductServices(IProductCommands command, IProductQuery query, ICategoryServices categoryServices,
+                            ISaleProductServices saleProductServices)
     {
         _command = command;
         _query = query;
         _categoryServices = categoryServices;
+        _saleProductServices = saleProductServices;
     }
 
     public async Task<ProductResponse> CreateProduct(ProductRequest request)
     {
+        await CheckIfCategoryExists(request);
+        if(request.Discount > 100 || request.Discount < 0)
+        {
+            throw new BadRequestException("Descuento invalido");
+        }
         Product product = new Product 
         {
             Name = request.Name,
@@ -50,6 +59,11 @@ public class ProductServices : IProductServices
     }
     public async Task<ProductResponse> UpdateProduct(ProductRequest request, Guid id)
     {
+        await CheckIfCategoryExists(request);
+        if(request.Discount > 100 || request.Discount < 0)
+        {
+            throw new BadRequestException("Descuento invalido");
+        }
         Product product = await _command.UpdateProduct(request, id);
         return await CreateProductResponse(product);
     }
@@ -57,6 +71,10 @@ public class ProductServices : IProductServices
     public async Task<ProductResponse> DeleteProduct(Guid id)
     {
         Product product = await _query.GetProductById(id);
+        if(await _saleProductServices.IsProductSold(id))
+        {
+            throw new Conflict("No se puede elimnar un producto vendido");
+        } 
         ProductResponse productResponse = await CreateProductResponse(product);
         await _command.DeleteProduct(product);
         return productResponse;
@@ -73,25 +91,35 @@ public class ProductServices : IProductServices
         Product product = await _query.GetProductById(productId);
         return await CreateProductResponse(product);
     }
-    private Task<List<ProductGetResponse>> CreateListProductGetResponse(List<Product> products)
+    private async Task<List<ProductGetResponse>> CreateListProductGetResponse(List<Product> products)
     {
         List<ProductGetResponse> productGetResponses = new List<ProductGetResponse>();
         foreach(Product product in products)
         {
+            Category category = await _categoryServices.GetCategoryById(product.CategoryId);
             ProductGetResponse response = new ProductGetResponse
             {
-            Id = product.ProductId,
-            Name = product.Name,
-            Price = product.Price,
-            Discount = product.Discount,
-            ImageUrl = product.ImageUrl,  
-            CategoryName = product.CategoryId
+                Id = product.ProductId,
+                Name = product.Name,
+                Price = product.Price,
+                Discount = product.Discount,
+                ImageUrl = product.ImageUrl,  
+                CategoryName = category.Name
             };
             productGetResponses.Add(response);
         }
         
-        return Task.FromResult(productGetResponses);
+        return await Task.FromResult(productGetResponses);
+    }
+    private async Task CheckIfCategoryExists(ProductRequest request)
+    {
+        try
+        {
+            Category category = await _categoryServices.GetCategoryById(request.Category);  
+        }
+        catch (NotFoundException)
+        {
+            throw new BadRequestException("La categoria ingresada no es valida");
+        }
     }
 }
-
-    

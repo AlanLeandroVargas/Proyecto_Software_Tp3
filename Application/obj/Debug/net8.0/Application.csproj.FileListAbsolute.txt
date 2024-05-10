@@ -13,3 +13,4 @@ C:\Users\Pc\Desktop\Uni\Proyecto_Software\Trabajo_Practico_2\Application\obj\Deb
 C:\Users\Pc\Desktop\Uni\Proyecto_Software\Trabajo_Practico_2\Application\obj\Debug\net8.0\refint\Application.dll
 C:\Users\Pc\Desktop\Uni\Proyecto_Software\Trabajo_Practico_2\Application\obj\Debug\net8.0\Application.pdb
 C:\Users\Pc\Desktop\Uni\Proyecto_Software\Trabajo_Practico_2\Application\obj\Debug\net8.0\ref\Application.dll
+c:\Users\Pc\Desktop\Uni\Proyecto_Software\Trabajo_Practico_2\Application\obj\Debug\net8.0\Application.sourcelink.json

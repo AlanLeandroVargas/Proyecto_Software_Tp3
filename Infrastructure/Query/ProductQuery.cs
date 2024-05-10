@@ -37,8 +37,8 @@ public class ProductQuery : IProductQuery
     public async Task<Product> GetProductById(Guid productId)
     {
         Product? product = await _context.Products
-                        .FirstOrDefaultAsync(s => s.ProductId == productId);        
-        if(product == null) throw new NotFoundException("Producto no encontrado");
+                        .FirstOrDefaultAsync(s => s.ProductId == productId);      
+        if(product == null) throw new NotFoundException("Producto no encontrado");          
         return product;
     }
 }

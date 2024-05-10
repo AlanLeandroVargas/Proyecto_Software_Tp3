@@ -15,3 +15,4 @@ C:\Users\Pc\Desktop\Uni\Proyecto_Software\Trabajo_Practico_2\Infrastructure\obj\
 C:\Users\Pc\Desktop\Uni\Proyecto_Software\Trabajo_Practico_2\Infrastructure\obj\Debug\net8.0\refint\Infrastructure.dll
 C:\Users\Pc\Desktop\Uni\Proyecto_Software\Trabajo_Practico_2\Infrastructure\obj\Debug\net8.0\Infrastructure.pdb
 C:\Users\Pc\Desktop\Uni\Proyecto_Software\Trabajo_Practico_2\Infrastructure\obj\Debug\net8.0\ref\Infrastructure.dll
+c:\Users\Pc\Desktop\Uni\Proyecto_Software\Trabajo_Practico_2\Infrastructure\obj\Debug\net8.0\Infrastructure.sourcelink.json

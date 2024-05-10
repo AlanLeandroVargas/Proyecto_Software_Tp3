@@ -5,7 +5,7 @@ namespace Application.Interfaces;
 
 public interface ICategoryCommands
 {
-    Task<Domain.Entities.Category> InsertCategory(Domain.Entities.Category category);
-    Task<Domain.Entities.Category> UpdateCategory(UpdateCategoryRequest request);
+    Task<Category> InsertCategory(Category category);
+    Task<Category> UpdateCategory(UpdateCategoryRequest request);
     Task DeleteCategory(int id);
 }

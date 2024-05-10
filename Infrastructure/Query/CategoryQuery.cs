@@ -1,4 +1,5 @@
-﻿using Application.Interfaces;
+﻿using Application.Exceptions;
+using Application.Interfaces;
 using Domain.Entities;
 using Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
@@ -23,7 +24,8 @@ public class CategoryQuery : ICategoryQuery
 
     public async Task<Category> GetCategoryById(int categoryId)
     {
-        Category category = await _context.Categories.FirstOrDefaultAsync(s => s.CategoryId == categoryId);
+        Category? category = await _context.Categories.FirstOrDefaultAsync(s => s.CategoryId == categoryId);
+        if(category == null) throw new NotFoundException("Categoria no encontrada");
         return category;
     }
 

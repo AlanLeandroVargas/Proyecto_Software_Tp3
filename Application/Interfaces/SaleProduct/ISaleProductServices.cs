@@ -12,4 +12,5 @@ public interface ISaleProductServices
     Task<List<SaleProduct>> GetListSaleProducts();
     Task<SaleProduct> GetSaleProductById(int shoppingCartId);
     Task<List<SaleProductResponse>> GetSaleProductBySaleId(int id);
+    Task<bool> IsProductSold(Guid productId);
 }

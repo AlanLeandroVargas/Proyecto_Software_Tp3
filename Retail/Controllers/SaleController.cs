@@ -1,4 +1,4 @@
-﻿using System.ComponentModel;
+﻿using Application.Exceptions;
 using Application.Interfaces;
 using Application.Request;
 using Application.Response;
@@ -15,41 +15,54 @@ public class SaleController : ControllerBase
     {
         _saleServices = saleServices;
     }
+
+    
     [HttpPost]
+    [ProducesResponseType(typeof(SaleResponse), 201)]
+    [ProducesResponseType(typeof(ApiError), 400)]
+    [ProducesResponseType(typeof(ApiError), 409)]    
     public async Task<IActionResult> CreateSale(SaleRequest request)
     {
         try
-        {
+        {               
             var result = await _saleServices.CreateSale(request);
             return new JsonResult(result){StatusCode = 201};
         }
-        catch (Exception)
+        catch (BadRequestException ex)
         {
-            throw;
+            return new JsonResult(new ApiError{Message = ex.Message}){StatusCode = 400};
+        }
+        catch (Conflict ex)
+        {
+            return new JsonResult(new ApiError{Message = ex.Message}){StatusCode = 409};
         }
     }
     [HttpGet]
+    [ProducesResponseType(typeof(List<SaleGetResponse>), 200)]
+    [ProducesResponseType(typeof(ApiError), 400)]
     public async Task<IActionResult> GetListSales(DateTime? from = null, DateTime? to = null)
     {
         try
         {
             var result = await _saleServices.GetListSales(from, to);
-            return new JsonResult(result){StatusCode = 201};
+            return new JsonResult(result){StatusCode = 200};
         }
-        catch (Exception)
+        catch (BadRequestException ex)
         {
-            throw;
+            return new JsonResult(new ApiError{Message = ex.Message}){StatusCode = 400};
         }
     }
     [HttpGet("{id}")]
+    [ProducesResponseType(typeof(SaleResponse), 200)]
+    [ProducesResponseType(typeof(ApiError), 404)]    
     public async Task<IActionResult> GetSaleById(int id)
     {
         try
         {   
             var result = await _saleServices.GetSaleDetails(id);
-            return new JsonResult(result){StatusCode = 201};
+            return new JsonResult(result){StatusCode = 200};
         }
-        catch (Exception ex)
+        catch (NotFoundException ex)
         {
             return new JsonResult(new ApiError{Message = ex.Message}){StatusCode = 404};
         }

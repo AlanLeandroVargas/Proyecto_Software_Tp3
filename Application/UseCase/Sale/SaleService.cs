@@ -1,4 +1,5 @@
-﻿using Application.Interfaces;
+﻿using Application.Exceptions;
+using Application.Interfaces;
 using Application.Request;
 using Application.Response;
 using Domain.Entities;
@@ -21,6 +22,10 @@ public class SaleServices : ISaleServices
     }
     public async Task<List<SaleGetResponse>> GetListSales(DateTime? from, DateTime? to)
     {
+        if(from > to)
+        {
+            throw new BadRequestException("La fecha desde no puede ser mayor a la fecha hasta");
+        }
         List<Sale> sales = await _query.GetListSales(from, to);
         return await CreateSaleGetResponses(sales);
     }
@@ -72,7 +77,7 @@ public class SaleServices : ISaleServices
         }
         else
         {
-            throw new Exception("Total Payed computed incorrectly");
+            throw new Conflict("El total es incorrecto");
         }        
     }
     private async Task<SaleResponse> CreateSaleResponse(Sale sale, int totalQuantity, List<SaleProductResponse> saleProductResponses)
@@ -124,12 +129,21 @@ public class SaleServices : ISaleServices
     public async Task<Dictionary<ProductResponse, int>> RetrieveProducts(SaleRequest request)
     {
         Dictionary<ProductResponse, int> productsAndQuantities= new Dictionary<ProductResponse, int>();
-        foreach(SaleProductRequest saleProduct in request.Products)
+        try
         {
-            ProductResponse currentProduct = await _productServices.GetProductById(saleProduct.ProductId);
-            productsAndQuantities.Add(currentProduct, saleProduct.Quantity);
-        };
-        return productsAndQuantities;
+            foreach(SaleProductRequest saleProduct in request.Products)
+            {
+                ProductResponse currentProduct = await _productServices.GetProductById(saleProduct.ProductId);
+                productsAndQuantities.Add(currentProduct, saleProduct.Quantity);                
+            };
+            return productsAndQuantities;
+        }
+        catch (NotFoundException)
+        {
+            throw new BadRequestException("Producto/s inexistente/s");
+        }
+        
+        
     }
     public decimal ComputeSubTotal(Dictionary<ProductResponse, int> productsAndQuantities)
     {

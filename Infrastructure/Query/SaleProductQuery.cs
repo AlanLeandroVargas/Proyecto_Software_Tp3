@@ -17,7 +17,7 @@ public class SaleProductQuery : ISaleProductQuery
     public async Task<List<SaleProduct>> GetListSaleProducts()
     {
         List<SaleProduct> saleproducts = await _context.SaleProducts
-                            .ToListAsync();
+                                        .ToListAsync();
         return saleproducts;
     }
 
@@ -32,5 +32,11 @@ public class SaleProductQuery : ISaleProductQuery
         IQueryable<SaleProduct> saleProducts = _context.SaleProducts;
         saleProducts = saleProducts.Where(s => s.Sale == id);        
         return await saleProducts.ToListAsync();;
+    }
+    public async Task<SaleProduct?> SoldProduct(Guid productId)
+    {
+        SaleProduct? saleProduct = await _context.SaleProducts
+                                .FirstOrDefaultAsync(spp => spp.Product == productId);
+        return saleProduct;
     }
 }

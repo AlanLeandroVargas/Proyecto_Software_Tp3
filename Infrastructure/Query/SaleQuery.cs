@@ -26,19 +26,6 @@ public class SaleQuery : ISaleQuery
         {
             sales = sales.Where(s => s.Date <= to);
         }
-        // if(from == null && to == null) return await sales.ToListAsync();
-        // if(from != null && to == null) 
-        // {
-        //     sales = sales.Where(s => s.Date >= from);
-        // }
-        // if(from == null && to != null)
-        // {
-        //     sales = sales.Where(s => s.Date <= to);
-        // }
-        // if(from != null && to != null)
-        // {
-        //     sales = sales.Where(s => s.Date >= from && s.Date <= to);
-        // }
         return await sales.ToListAsync();
     }
 

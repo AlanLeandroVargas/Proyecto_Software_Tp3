@@ -4,6 +4,6 @@ namespace Application.Interfaces;
 
 public interface ICategoryQuery
 {
-    Task<List<Domain.Entities.Category>> GetListCategories();
-    Task<Domain.Entities.Category> GetCategoryById(int categoryId);
+    Task<List<Category>> GetListCategories();
+    Task<Category> GetCategoryById(int categoryId);
 }

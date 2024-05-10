@@ -89,4 +89,13 @@ public class SaleProductServices : ISaleProductServices
         
         return Task.FromResult(saleProductResponses);
     }
+    public async Task<bool> IsProductSold(Guid productId)
+    {
+        SaleProduct saleProduct = await _query.SoldProduct(productId);
+        if(saleProduct == null)
+        {
+            return await Task.FromResult(false);
+        }
+        return await Task.FromResult(true);
+    }
 }

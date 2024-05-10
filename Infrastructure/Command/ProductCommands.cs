@@ -35,8 +35,7 @@ public class ProductCommands : IProductCommands
     public async Task<Product> UpdateProduct(ProductRequest request, Guid id)
     {
         try 
-        {
-            
+        {            
             Product product = await _query.GetProductById(id);
             if(product.Name != request.Name) 
             {
@@ -60,10 +59,7 @@ public class ProductCommands : IProductCommands
     public async Task DeleteProduct(Product product)
     {
         try
-        {   if(_context.SaleProducts.Any(sp => sp.Product == product.ProductId))
-            {
-                throw new Conflict("No se puede eliminar un producto que ya fue vendido");
-            }
+        {               
             _context.Remove(product);
             await _context.SaveChangesAsync();
         }
