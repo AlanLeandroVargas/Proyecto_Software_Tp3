@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Pc\\Desktop\\Uni\\Proyecto_Software\\Trabajo_Practico_2\\Domain\\Domain.csproj": {}
+    "C:\\Users\\Pc\\Desktop\\Uni\\Proyecto_Software\\Reentrega_Tp2\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Pc\\Desktop\\Uni\\Proyecto_Software\\Trabajo_Practico_2\\Domain\\Domain.csproj": {
+    "C:\\Users\\Pc\\Desktop\\Uni\\Proyecto_Software\\Reentrega_Tp2\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Pc\\Desktop\\Uni\\Proyecto_Software\\Trabajo_Practico_2\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Pc\\Desktop\\Uni\\Proyecto_Software\\Reentrega_Tp2\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "c:\\Users\\Pc\\Desktop\\Uni\\Proyecto_Software\\Trabajo_Practico_2\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\Pc\\Desktop\\Uni\\Proyecto_Software\\Reentrega_Tp2\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\Pc\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Pc\\Desktop\\Uni\\Proyecto_Software\\Trabajo_Practico_2\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\Pc\\Desktop\\Uni\\Proyecto_Software\\Reentrega_Tp2\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Pc\\AppData\\Roaming\\NuGet\\NuGet.Config",

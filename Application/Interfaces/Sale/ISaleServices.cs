@@ -8,6 +8,5 @@ public interface ISaleServices
 {
     Task<SaleResponse> CreateSale(SaleRequest request);
     Task<List<SaleGetResponse>> GetListSales(DateTime? from, DateTime? to);
-    Task<Sale> GetSaleById(int saleId);
-    Task<SaleResponse> GetSaleDetails(int id);
+    Task<SaleResponse> GetSaleById(int saleId);
 }

@@ -38,7 +38,7 @@ public class ProductServices : IProductServices
             Discount = request.Discount,
             ImageUrl = request.ImageUrl
         };
-        var result = await _command.InsertProduct(product);
+        Product result = await _command.InsertProduct(product);
         return await CreateProductResponse(result);
     }
 
@@ -73,7 +73,7 @@ public class ProductServices : IProductServices
         Product product = await _query.GetProductById(id);
         if(await _saleProductServices.IsProductSold(id))
         {
-            throw new Conflict("No se puede elimnar un producto vendido");
+            throw new Conflict("No se puede eliminar un producto vendido");
         } 
         ProductResponse productResponse = await CreateProductResponse(product);
         await _command.DeleteProduct(product);

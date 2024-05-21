@@ -28,20 +28,7 @@ public class SaleProductServices : ISaleProductServices
         };
         SaleProduct result = await _command.InsertSaleProduct(saleProduct);
         return await CreateSaleProductResponse(result);
-    }
-
-    private Task<SaleProductResponse> CreateSaleProductResponse(SaleProduct saleProduct)
-    {
-        SaleProductResponse response = new SaleProductResponse 
-        {
-            Id = saleProduct.ShoppingCartId,
-            ProductId = saleProduct.Product,
-            Quantity = saleProduct.Quantity,
-            Price = saleProduct.Price,
-            Discount = saleProduct.Discount
-        };
-        return Task.FromResult(response);
-    }
+    }    
     public async Task<SaleProductResponse> UpdateSaleProduct(UpdateSaleProductRequest request)
     {
         SaleProduct saleProduct = await _command.UpdateSaleProduct(request);
@@ -70,6 +57,18 @@ public class SaleProductServices : ISaleProductServices
         List<SaleProduct> saleProducts = await _query.GetSaleProductBySaleId(id);
         List<SaleProductResponse> saleProductResponses = await CreateSaleProductResponses(saleProducts);
         return saleProductResponses;
+    }
+    private Task<SaleProductResponse> CreateSaleProductResponse(SaleProduct saleProduct)
+    {
+        SaleProductResponse response = new SaleProductResponse 
+        {
+            Id = saleProduct.ShoppingCartId,
+            ProductId = saleProduct.Product,
+            Quantity = saleProduct.Quantity,
+            Price = saleProduct.Price,
+            Discount = saleProduct.Discount
+        };
+        return Task.FromResult(response);
     }
     private Task<List<SaleProductResponse>> CreateSaleProductResponses(List<SaleProduct> saleProducts)
     {

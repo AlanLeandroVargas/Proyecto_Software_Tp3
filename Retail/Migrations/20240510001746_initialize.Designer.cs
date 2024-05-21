@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Retail.Migrations
 {
     [DbContext(typeof(RetailContext))]
-    [Migration("20240507030049_lol")]
-    partial class lol
+    [Migration("20240510001746_initialize")]
+    partial class initialize
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -134,7 +134,7 @@ namespace Retail.Migrations
                     b.HasData(
                         new
                         {
-                            ProductId = new Guid("0c14eea4-ae23-41d6-b446-a18eb1a970d6"),
+                            ProductId = new Guid("a91f5709-234d-40c5-b465-524d11814a9e"),
                             CategoryId = 8,
                             Description = "Los Nachos Doritos son productos de copetín a base de maíz y con un intenso sabor a queso. Estos snacks crujientes son perfectos para acompañarlos con cheddar, Gr.uacamole o cualquier otro tipo de salsa que tengas a mano. Ideales para compartir en cualquier ocasión, como snacks o aperitivos en tus fiestas. Probá los Doritos como más te Gr.uste y sorprendete con su delicioso sabor.",
                             Discount = 10,
@@ -144,7 +144,7 @@ namespace Retail.Migrations
                         },
                         new
                         {
-                            ProductId = new Guid("f3ecac05-e7ce-4610-b7f5-d4cc23e5f38c"),
+                            ProductId = new Guid("35c56cb7-ef18-49b8-9d49-97223f5ceb70"),
                             CategoryId = 8,
                             Description = "Las Papas fritas Lays Clásicas están hechas con solo 3 ingredientes: papa, aceite y sal. Están sazonadas a la perfección. Tienen una textura crujiente y poseen un sabor único. Lays®, las papas fritas preferidas de los argentinos, estarán presente en cada reunión y en cada encuentro con amigos con exquisitos sabores. Disfruta de este snack salado y acaba con tu antojo.",
                             Discount = 20,
@@ -154,7 +154,7 @@ namespace Retail.Migrations
                         },
                         new
                         {
-                            ProductId = new Guid("01eac913-e567-4260-88d8-68f8856df918"),
+                            ProductId = new Guid("0005d8f0-a327-4696-85f6-fb192489886a"),
                             CategoryId = 8,
                             Description = "Los Nuevos Vegetales Deshidratados de Knorr son 100% vegetales naturales deshidratados. Son muy fáciles de usar, solamente tenes que hidratarlos por 3 minutos y ya están listos para usar. Agregalos también a tus salsas, arroz y otras preparaciones que contengan agua durante la cocción.",
                             Discount = 30,
@@ -164,7 +164,7 @@ namespace Retail.Migrations
                         },
                         new
                         {
-                            ProductId = new Guid("b1534a34-ea59-4e0c-82f1-c576540f706f"),
+                            ProductId = new Guid("9feb263f-1c5e-47f4-93ca-5d6b12a6cbd8"),
                             CategoryId = 1,
                             Description = "Margarina 100 % vegetal con 30 % menos grasa. Es ideal para untar por su perfil delicado y textura aireada.",
                             Discount = 15,
@@ -174,7 +174,7 @@ namespace Retail.Migrations
                         },
                         new
                         {
-                            ProductId = new Guid("1b9b34c4-0af0-4bbd-a314-a9f4f01c7632"),
+                            ProductId = new Guid("bed31879-cfd3-458d-9c58-810177036b76"),
                             CategoryId = 8,
                             Description = "LA SERENÍSIMA CLÁSICO, yogur bebible, parcialmente descremado, sabor frutilla.?De la mejor leche salen los mejores yogures, disfrutá un vaso de yogur todos los días. SACHET 900g.?Yogur con probióticos endulzado parcialmente descremado fortificado con zinc y vitaminas A y D sabor frutilla libre de gluten – licuado. Sin TACC.",
                             Discount = 25,
@@ -184,7 +184,7 @@ namespace Retail.Migrations
                         },
                         new
                         {
-                            ProductId = new Guid("60efbca3-099c-4be6-80d8-1eeefe5785aa"),
+                            ProductId = new Guid("21b70782-9395-4ec0-bd44-98df281ff8af"),
                             CategoryId = 8,
                             Description = "LA SERENÍSIMA CLÁSICO, postre, chocolate. El sabor y la cremosidad con la calidad que ya conoces, un postre ideal para toda la familia. POSTRE 95gr. Postre sabor a chocolate fortificado con vitaminas A, D y ácido fólico libre de gluten. Sin TACC.",
                             Discount = 5,
@@ -194,7 +194,7 @@ namespace Retail.Migrations
                         },
                         new
                         {
-                            ProductId = new Guid("9e02046d-d168-45ae-be38-53465a984004"),
+                            ProductId = new Guid("71b5a66a-54ef-4384-9aa3-e04cb2e56973"),
                             CategoryId = 4,
                             Description = "El nuevo jabón líquido Skip para Diluir Bio-Enzimas, tiene una nueva tecnología que garantiza la superioridad en la limpieza y cuidado de las fibras, asegurando un impacto positivo en el planeta. El nuevo Skip líquido para diluir ofrece el mismo cuidado de siempre pero de una forma más conveniente para el consumidor: - MÁS ECONÓMICO: 20% de ahorro por lavado. - MÁS PRÁCTICO: No requiere cambios en la dosificación. Es más facil de transportar y almacenar. - MÁS ECOLÓGICO: Fórmula con Activo biodegradable. Menos uso de plástico Botella hecha con plástico reciclado y 100% reciclable. Skip está en constante evolución para ofrecer la mejor tecnología en el lavado y cuidado de la ropa. Además, colores más vivos y duraderos, previene pelotitas, elimina manchas y cuida texturas. Las nuevas tecnologías de los jabones líquidos Skip nos ayudan a consumir inteligentemente, optimizando el uso de energía, disminuyendo residuos e incluso siendo más económico. Y Skip siendo líder en innovación tecnológica tiene credenciales para este lanzamiento. ¿Cómo se utiliza? 1) Coloque agua corriente hasta la marca (2,5 litros) en una botella vacía de Skip 3L 2) Coloque todo el contenido (500 ml) del Jabón líquido Skip para diluir dentro de la botella de 3 L. 3) Cierre la botella y agite hasta lograr una apariencia uniforme (aproximadamente 5 veces). Deje reposar unos minutos hasta que baje la espuma. 4) Dosifique 100?ml para una carga de ropa completa o 150 ml para ropa muy sucia. 500 ml rinde 3L (30 lavados). El lavado perfecto de tu ropa es muy simple.",
                             Discount = 20,
@@ -204,7 +204,7 @@ namespace Retail.Migrations
                         },
                         new
                         {
-                            ProductId = new Guid("f4d09ec3-4ded-4f3b-a750-2546bf795a2b"),
+                            ProductId = new Guid("4973a3d8-3afb-4788-8372-a9b8f13c4211"),
                             CategoryId = 4,
                             Description = "Limpiador CIF EXPERT Antigrasa (450 ml) es un desengrasante líquido que con su innovadora tecnología brinda una limpieza fácil y rápida, ayudando a eliminar hasta la grasa quemada.",
                             Discount = 25,
@@ -214,7 +214,7 @@ namespace Retail.Migrations
                         },
                         new
                         {
-                            ProductId = new Guid("d0bcbcc5-536a-4171-bef2-d9aaa8cf49c1"),
+                            ProductId = new Guid("05fa83f3-ee36-4437-9dbb-fc9c72e2f74c"),
                             CategoryId = 4,
                             Description = "En ALA quisimos dar el próximo paso con el nuevo ALA líquido concentrado para diluir con Bicarbonato. La nueva fórmula del jabón líquido concentrado para diluir ALA Ecolavado con Bicarbonato tiene un poder de limpieza superior y agentes de limpieza naturales que remueven las manchas más difíciles, en el primer lavado. Este jabón para diluir combate el mal olor y es ideal para ropa blanca y de color. Además de tener una fragancia duradera. Por otro lado, su fórmula, con una tecnología patentada que se potencia en contacto con el agua y el agregado del bicarbonato que contribuye a mantener la blancura de las prendas, hace de este jabón para ropa un producto de limpieza profunda y superior. Este jabón concentrado rinde 3 L dado que su formato es para diluir. Para prepararlo, solo tenés que llenar una botella vacía de ALA 3 L con 2,5?L de agua potable, agregar el ALA líquido para diluir, mezclar 5 veces de arriba hacia abajo - ¡Y listo, ya tenés tu jabón líquido preparado con la misma consistencia y fragancia riquísima de siempre! Se dosifican 100?ml para una carga de ropa completa o 150?ml para ropa muy sucia. ALA, porque ensuciarse hace bien. Ingresá a www.ala.com.ar y conocé más de nuestros productos.",
                             Discount = 30,
@@ -224,7 +224,7 @@ namespace Retail.Migrations
                         },
                         new
                         {
-                            ProductId = new Guid("370e69f9-07f1-42c1-9fba-5eaf253eab56"),
+                            ProductId = new Guid("28591953-06ed-4db9-93a8-07eaa6400a3a"),
                             CategoryId = 4,
                             Description = "Una lunchera",
                             Discount = 5,
@@ -234,7 +234,7 @@ namespace Retail.Migrations
                         },
                         new
                         {
-                            ProductId = new Guid("ddb5aab1-edcb-45a0-bf38-ff7910fbb815"),
+                            ProductId = new Guid("6ac5e62d-4fdb-4ca8-8aad-2d67e23afe73"),
                             CategoryId = 4,
                             Description = "ÉCCOLE es un adhesivo para zapatillas de consistencia tipo gel, incoloro y fácil de usar. Adhiere rápidamente sobre los materiales más utilizados en la fabricación de zapatillas tales como cuero, telas y ciertos materiales plásticos.Se utiliza para realizar arreglos en punteras, bordes, talones, suelas y capelladas.",
                             Discount = 25,
@@ -244,7 +244,7 @@ namespace Retail.Migrations
                         },
                         new
                         {
-                            ProductId = new Guid("8e165880-6b24-488d-ba6a-71293dea7a3b"),
+                            ProductId = new Guid("5a7a2751-d2a7-492d-a9a3-c42c5bc1c4bb"),
                             CategoryId = 4,
                             Description = "Lampara led",
                             Discount = 10,
@@ -254,7 +254,7 @@ namespace Retail.Migrations
                         },
                         new
                         {
-                            ProductId = new Guid("45d68d2c-fcc0-4e4e-a29d-3676089a6734"),
+                            ProductId = new Guid("a775ffc7-9f42-4650-b364-9afb7c6f74f5"),
                             CategoryId = 1,
                             Description = "Tecnología Principal: Inverter Dimensiones del producto 84,6 x 59,5 x 64,4 cm Dimensiones con embalaje 87,7 x 67,6 x 69,8 cm Capacidad bruta 64 L / 9,5 KG Color Blanco Tipo (abertura de puerta) Frontal Puerta Vidrio/Plástico Ciclos (listar) 24 Ciclos: Rápido 45 Quita Manchas PRO Refrescar con Vapor Lana Edredón Eco EEE Enjuagar y Centrifugar Centrifugar Diario Color Blanca Rápido 15 Delicada Sanitizar Sábanas y toallas + Ciclos adicionales Filtro (sí/no) Si Sexto Sentido Si Origen Argentina Sistema de lavado Frontal Revoluciones por minuto 1400 RPM Peso 79,7 KG Pies Niveladores Si Ruedas No Display Si Control de temperatura Si Alarma de puerta Si Traba de seguridad Si Función Antiarrugas Si Tambor Acero inoxidable Garantía 12 meses + 10 años garantía especial limitada en el motor Tipo de adaptador Argentino Tipo de cable Estándard con enchufe Nivel de ruido N/A Consumo de agua 64 L Media carga Incluye sensado de carga Eficacia de Lavado A Eficacia del Centrifugado B Eficiencia Energética / Clase Climática A++ Bomba de desagote Sí Lavado a Mano Incluye ciclo de lavado delicado Exclusión de Centrifugado Si Agua fría / caliente Incluye calentador interno",
                             Discount = 20,
@@ -264,7 +264,7 @@ namespace Retail.Migrations
                         },
                         new
                         {
-                            ProductId = new Guid("47ceb2c5-f9a6-4d77-aa39-82e3e7c02811"),
+                            ProductId = new Guid("a2d5c629-2a3a-4d9e-8932-f55564638fdf"),
                             CategoryId = 1,
                             Description = "Certificado de Seguridad Eléctrica: DC-E-W2-347.1 IRAM - Instituto Argentino de Normalizacion y Certificación. Heladera Whirlpool No Frost Inverter 443 litros",
                             Discount = 30,
@@ -274,7 +274,7 @@ namespace Retail.Migrations
                         },
                         new
                         {
-                            ProductId = new Guid("99673a69-1601-4599-b223-fd86f8bea79b"),
+                            ProductId = new Guid("49bdab5f-bf45-498f-94bc-25645c6362b5"),
                             CategoryId = 1,
                             Description = "Certificado de Seguridad Eléctrica: DC-E-A39-063.1 IRAM - Instituto Argentino de Normalizacion y Certificación. Microondas Empotrable con Gill Ariston",
                             Discount = 50,
@@ -284,7 +284,7 @@ namespace Retail.Migrations
                         },
                         new
                         {
-                            ProductId = new Guid("74b06b91-69c2-4333-b4f1-e0eb074e46e4"),
+                            ProductId = new Guid("5ae5f4eb-3b2f-4896-8ee6-e671bdac9fc8"),
                             CategoryId = 1,
                             Description = "Dimensiones producto 62 x 110 x 66 cm (ancho x alto x profundidad) Dimensiones con embalaje 67 x 114 x 71 cm (ancho x alto x profundidad) Capacidad bruta 11KG Color Blanco Tipo (abertura de puerta) Superior con sistema soft close en bisgras. Puerta Vidrio templado Niveles de agua 5 (4 + sensado automático) Ciclos Anti-pelusas Antialérgico Remoción de manchas Pro Ropa de mascotas Diario Blanca Color Delicado Jeans Edredón Limpieza de tambor Sanitizar (ropa) Lavado Express Ciclos manuales: Remojar Lavar Enjuagar Desagotar y Centrifugar Filtro Sí Sexto Sentido No. Incluye otras funciones inteligentes. Otras funciones inteligentes Sí: Sensado automático Origen Argentina Sistema de lavado Impeller. Eje vertical, carga superior. Revoluciones por minuto 700 RPM Peso 41.6 KG (neto) Eficiencia Energética / Clase Climática A Pies Niveladores Sí Ruedas No Display Sí Control de temperatura Sí, 3 Alarma de puerta No Traba de seguridad Sí Antiarrugas Sí Tambor Acero inoxidable Garantía 12 meses Consumo de agua 195 Litros Media carga No. Incluye niveles de agua en el panel para seleccionar manualmente. Eficacia de Lavado A Eficacia del Centrifugado C Bomba de desagote Sí Lavado a Mano Incluye ciclo de lavado delicado Entrada Doble de agua Sí Exclusión de Centrifugado Incluye opción antiarrugas Agua fría / caliente Sí Tipo Doble entrada País de destino ARGENTINA Otras Características Incluye: Tecnología de detección automática del tamaño de la carga (sensado automático) Inicio diferido Bloqueo del panel Inluye filtro y lifters 10 años de garantía limitada en el motor* 5 años de garantía limitada en la tarjeta de interfaz",
                             Discount = 25,
@@ -294,7 +294,7 @@ namespace Retail.Migrations
                         },
                         new
                         {
-                            ProductId = new Guid("e6821bf3-216c-4c41-81e2-120cab11854b"),
+                            ProductId = new Guid("904e2103-8ea3-4853-90ec-c40d6621834d"),
                             CategoryId = 1,
                             Description = "Certificado de Seguridad Eléctrica: DC-E-A39-043.3 - IRAM - Instituto Argentino de Normalizacion y Certificación. Ariston dedica el mayor cuidado al diseño de todos sus anafes con detalles de terminacion ergonomicos y durables. El anafe mixto, cuenta con un diseño unico. Sus cuatro hornallas a gas, una con triple corona, y dos zonas de cocción radiante vitroceramica, lo hacen práctico y elegante.",
                             Discount = 15,
@@ -304,7 +304,7 @@ namespace Retail.Migrations
                         },
                         new
                         {
-                            ProductId = new Guid("d9b78837-b8c4-4c1b-a5ea-5590077d6156"),
+                            ProductId = new Guid("e2a9ef75-b810-4bfc-948c-24b681a86e53"),
                             CategoryId = 1,
                             Description = "Certificado de Seguridad Eléctrica: Cocina : DC-E-M24-012.1 IRAM - Instituto Argentino de Normalizacion y Certificación / Campana : DC-E-S23-047.19 IRAM - Instituto Argentino de Normalizacion y Certificación. Combo Whirlpool Cocina y Campana",
                             Discount = 40,
@@ -314,7 +314,7 @@ namespace Retail.Migrations
                         },
                         new
                         {
-                            ProductId = new Guid("91ad5bbd-670e-407e-b115-c1941d34504a"),
+                            ProductId = new Guid("1ed07f0a-0c75-4a25-94a9-04ba70d792d3"),
                             CategoryId = 1,
                             Description = "INFORMACIÓN IMPORTANTE: > Tenemos stock de todos nuestros productos > Envío gratis a todo el país (excepto T. del Fuego) > Plazo de entrega: - CABA y GBA: hasta 8 días hábiles - Interior: hasta 12 días hábiles > Sólo realizamos ventas a consumidor final, motivo por el que únicamente emitimos Factura “B”. -------------------------------------- Heladera Whirlpool - Retro - 76 Litros Rojo Modelo: WRA09R1 Frigobar Whirlpool Retro roja rescata el diseño elegante de los años 50 con sus patas cromadas y un logo de época. Es compacto pero tiene espacio para todo lo que precisas guardar y posee compartimentos modulares, rack para latas y congelador. - Congelador El congelador del frigobar Retro es perfecto para almacenar pequeños alimentos o botellas. - Todo en su lugar Con los compartimentos modulares es posible organizar y personalizar el interior de tu frigobar Retro, que cuenta con: rack para latas, anaquel fijo en su puerta, compartimento extra frío y un cajón multiuso. - Pies removibles Sus pies de cromo que cuidan el piso al evitar ralladuras, pueden ser removidos para utilizar la heladera en formato built in. ESPECIFICACIONES TÉCNICAS - Marca: Whirlpool - Color: Rojo - Capacidad: 76 lts - Dimensiones (cm) Alto 80,7 x Ancho 48,2 x Profundidad 51,9 - Dimensiones con embalaje (cm) Alto 86 x Ancho 51 x Profundidad 57 - Peso: 29 kg - Peso con embalaje: 30 kg - Eficiencia Energética: A - Garantía de Fábrica: 12 meses - Origen: Brasil",
                             Discount = 45,
@@ -324,7 +324,7 @@ namespace Retail.Migrations
                         },
                         new
                         {
-                            ProductId = new Guid("4d77021d-00d8-4223-a299-a0f2d64bf2cc"),
+                            ProductId = new Guid("65df4c37-7a0f-4115-b54e-2ec5cdf46bf8"),
                             CategoryId = 1,
                             Description = "Certificado de Seguridad Eléctrica: DC-E-S23-047.19 IRAM - Instituto Argentino de Normalizacion y Certificación. INFORMACIÓN IMPORTANTE: > Tenemos stock de todos nuestros productos > Envío gratis a todo el país (excepto T. del Fuego) > Plazo de entrega: - CABA y GBA: hasta 8 días hábiles - Interior: hasta 12 días hábiles > Sólo realizamos ventas a consumidor final, motivo por el que únicamente emitimos Factura “B”. -------------------------------------- Campana Extractora 60 Cm Inox Modelo: WAI62AR Campana de pared de 60 cm con diseño moderno y sofisticado. Con salida al exterior, alta capacidad de succión y motor doble turbina que te permite un mayor ahorro de energía. - Cocina libre de olores Cuenta con 3 velocidades de aspiración que te permiten regular el nivel de potencia de acuerdo a los distintos tipos de comida que estés preparando, adaptándose fácilmente a tus necesidades. - Comodidad y visibilidad Posee 2 lámparas halógenas te brindan luminosidad sobre tu cocina y te facilitan la visibilidad para hacerte más cómodo y placentero el momento de cocinar. ESPECIFICACIONES TÉCNICAS - Marca: Whirlpool - Color: Inoxidable - Dimensiones (cm) Alto 62 x Ancho 60 x Profundidad 49 - Peso: 11kg - Capacidad: 450 m3/h - 2 Lámparas halógenas de 28 watts - 3 Velocidades de aspiración - Botonera tipo pulsante - Garantía de Fábrica: 12 meses - Origen: Industria Argentina",
                             Discount = 30,
@@ -334,7 +334,7 @@ namespace Retail.Migrations
                         },
                         new
                         {
-                            ProductId = new Guid("a010000b-d97e-4d77-bca8-ef9aabdb73fa"),
+                            ProductId = new Guid("1917ab7d-1b52-4e5d-ad7c-7c484646069f"),
                             CategoryId = 3,
                             Description = "Remera reciclada",
                             Discount = 70,
@@ -344,7 +344,7 @@ namespace Retail.Migrations
                         },
                         new
                         {
-                            ProductId = new Guid("b0517483-9057-45b0-b720-b4fd11a15c1f"),
+                            ProductId = new Guid("bd97d891-c50a-4e62-881a-5c1f7ae9652d"),
                             CategoryId = 3,
                             Description = "Pantalon",
                             Discount = 15,
@@ -354,7 +354,7 @@ namespace Retail.Migrations
                         },
                         new
                         {
-                            ProductId = new Guid("0418c0fc-8d81-4c92-9145-a0c8762e80b7"),
+                            ProductId = new Guid("6a3cc33f-f1a9-43b6-8861-3f64e7fb64c0"),
                             CategoryId = 3,
                             Description = "Rompeviento",
                             Discount = 30,
@@ -364,7 +364,7 @@ namespace Retail.Migrations
                         },
                         new
                         {
-                            ProductId = new Guid("488c227d-57c9-48ec-940f-a4cab3756196"),
+                            ProductId = new Guid("ce747f98-67b0-4d61-a98e-a90ae035a5cb"),
                             CategoryId = 3,
                             Description = "Pantalon frisa",
                             Discount = 35,
@@ -374,7 +374,7 @@ namespace Retail.Migrations
                         },
                         new
                         {
-                            ProductId = new Guid("a4926cc3-36a3-487e-ac12-eb3e27c14e4a"),
+                            ProductId = new Guid("3bd72f42-727a-4a3b-b813-86ead171c342"),
                             CategoryId = 3,
                             Description = "Buzo frisa",
                             Discount = 25,
@@ -384,7 +384,7 @@ namespace Retail.Migrations
                         },
                         new
                         {
-                            ProductId = new Guid("16013081-ac70-4d11-9c62-1255f74140c1"),
+                            ProductId = new Guid("c4b70b72-9664-49b0-88c2-74689f8c6491"),
                             CategoryId = 7,
                             Description = "Globos para agua",
                             Discount = 10,
@@ -394,7 +394,7 @@ namespace Retail.Migrations
                         },
                         new
                         {
-                            ProductId = new Guid("276839e0-b94e-4fec-b516-22d275a83358"),
+                            ProductId = new Guid("2c521de1-09cb-4d0e-91ca-2816adc58580"),
                             CategoryId = 7,
                             Description = "Pistola de dardos de espuma",
                             Discount = 15,
@@ -404,7 +404,7 @@ namespace Retail.Migrations
                         },
                         new
                         {
-                            ProductId = new Guid("c82ede87-5c35-4dfb-ace5-c230ad7206d8"),
+                            ProductId = new Guid("5dd29c53-6e36-46cc-a9e4-b60263a62672"),
                             CategoryId = 7,
                             Description = "Peluche",
                             Discount = 30,
@@ -414,7 +414,7 @@ namespace Retail.Migrations
                         },
                         new
                         {
-                            ProductId = new Guid("5491b1cb-93ba-4d1a-ba5c-53a4550e8c30"),
+                            ProductId = new Guid("8ee7ab5c-eb3f-420c-83f2-e6a9dcc3f864"),
                             CategoryId = 7,
                             Description = "Camioneta de juguete",
                             Discount = 15,
@@ -424,7 +424,7 @@ namespace Retail.Migrations
                         },
                         new
                         {
-                            ProductId = new Guid("623ffc8c-12d5-45c5-ad16-cbc6cce10a28"),
+                            ProductId = new Guid("bddc8c69-5007-4f45-84fa-d2a1f40a889d"),
                             CategoryId = 9,
                             Description = "Actividades para hacer jugando, edición trazos.",
                             Discount = 10,
@@ -434,7 +434,7 @@ namespace Retail.Migrations
                         },
                         new
                         {
-                            ProductId = new Guid("7aa3678e-949f-4af8-9846-ebffe4d0d017"),
+                            ProductId = new Guid("b9a96f4d-62c6-4df8-b013-c5c58f3121fc"),
                             CategoryId = 9,
                             Description = "Descubre la magia de la Granja de Zenón con esta encantadora colección de libros para pintar en formato de bloc. Con adorables ilustraciones, juegos y actividades, estos libros invitan a los niños a sumergirse en un mundo colorido y estimulante. Ideales para fomentar la creatividad y desarrollar habilidades mientras se divierten con los entrañables personajes.",
                             Discount = 5,
@@ -444,7 +444,7 @@ namespace Retail.Migrations
                         },
                         new
                         {
-                            ProductId = new Guid("fcf9501b-e096-430c-9035-5e5a74fdf50b"),
+                            ProductId = new Guid("e6a56ed5-0c75-4294-b084-b30d1ee42bf2"),
                             CategoryId = 9,
                             Description = "Aventuras para colorear de los personajes de Pokemon.",
                             Discount = 15,
@@ -454,7 +454,7 @@ namespace Retail.Migrations
                         },
                         new
                         {
-                            ProductId = new Guid("23fd7d21-d1bb-42d6-a658-8e2fc53a3748"),
+                            ProductId = new Guid("25a0b5a0-aea1-4460-b032-8453087ffd9c"),
                             CategoryId = 10,
                             Description = "El Controlador Automático de Flujo (CAF) activa la bomba al detectar circulación de agua y la apaga en el instante que deja de fluir. No mantiene las cañerías presurizadas, reduciendo la probabilidad de roturas; y no se activa ante pequeñas pérdidas. El CAF requiere una presión mínima de ingreso de 0,05 Bar o tiene que haber entre la base del tanque y grifo / ducha mas cercana 50 cm (0,50 mca). - Evita que las cañerías permanezcan presurizadas - Impide el funcionamiento en seco - No enciende la bomba con pequeñas pérdidas - Totalmente silenciosa - Requiere presión mínima de ingreso de 0.02 bar o permanecer instalado a 0,2 metros por debajo del tanque elevado - Conexiones roscadas de 1 - Montaje directo sobre bombas de hasta 1,5 Hp - Alimentación: 220 V - Frecuencia: 50 / 60 Hz - Corriente máxima: 16 A - Temperatura máxima del agua: 60º C - Presión máxima de uso: 10 bar - Conexión de entrada: 1” - Conexión de salida: 1” - Grado de protección: IP 65 - Incluye Manual - Marca: Pluvius - Modelo: CAF 396 - Garantía: 6 meses",
                             Discount = 30,
@@ -464,7 +464,7 @@ namespace Retail.Migrations
                         },
                         new
                         {
-                            ProductId = new Guid("febd6f61-9df0-4504-b160-1264a4826f4b"),
+                            ProductId = new Guid("f1c633a7-de91-4f01-8dea-f7be8e3be863"),
                             CategoryId = 10,
                             Description = "Manguera de plastico",
                             Discount = 20,
@@ -474,7 +474,7 @@ namespace Retail.Migrations
                         },
                         new
                         {
-                            ProductId = new Guid("bc97a2ea-d703-4a3e-9e33-8a9771b23e01"),
+                            ProductId = new Guid("42a4ec94-0664-4408-8e65-68b50a451d5b"),
                             CategoryId = 10,
                             Description = "- Círculo parcial o completo - Producto: Aspersor - Color: Negro (con boquillas de bronce) - Conexión: 3/4 - Tipo de rosca: Macho - Presión: 2 - 4 bar - Radio: 12 - 14 m. - Caudal: 1500 - 2300 litros/hora - Marca: Maison",
                             Discount = 30,
@@ -484,7 +484,7 @@ namespace Retail.Migrations
                         },
                         new
                         {
-                            ProductId = new Guid("846a18e5-c4e6-44a3-84b0-daff336f26e7"),
+                            ProductId = new Guid("fb4882dd-7532-41b6-989a-86270019c04b"),
                             CategoryId = 6,
                             Description = "Colchoneta",
                             Discount = 25,
@@ -494,7 +494,7 @@ namespace Retail.Migrations
                         },
                         new
                         {
-                            ProductId = new Guid("6a6ed1e6-f774-439b-a642-f727e7a02d9f"),
+                            ProductId = new Guid("60c9bf6c-dc8a-4f85-b698-203e94aca1c7"),
                             CategoryId = 6,
                             Description = "Pesa",
                             Discount = 15,
@@ -504,7 +504,7 @@ namespace Retail.Migrations
                         },
                         new
                         {
-                            ProductId = new Guid("273398c7-f9f7-4bf8-8758-2d8afe2b6d7b"),
+                            ProductId = new Guid("c3368b7d-63ca-494c-a675-4242c8ef5324"),
                             CategoryId = 6,
                             Description = "Tubo de pelotas",
                             Discount = 10,
@@ -514,7 +514,7 @@ namespace Retail.Migrations
                         },
                         new
                         {
-                            ProductId = new Guid("6dc9f1a9-147c-482e-9ddf-984c4cf7a383"),
+                            ProductId = new Guid("99a7fc25-4309-4bf7-8e56-a398f22b914e"),
                             CategoryId = 5,
                             Description = "Panuelos",
                             Discount = 25,
@@ -524,7 +524,7 @@ namespace Retail.Migrations
                         },
                         new
                         {
-                            ProductId = new Guid("9e754dec-eef5-4bb7-8625-804e8a24224c"),
+                            ProductId = new Guid("40ab51de-2888-4b68-a005-cf12e746fd3d"),
                             CategoryId = 5,
                             Description = "Los Apósitos adhesivos Curitas Tela elástica son ideales para cubrir todo tipo de heridas pequeñas. Las vendas se estiran y se adaptan a los diferentes movimientos de la piel. Además, poseen una almohadilla antiadherente que protege la herida y la deja respirar. Cabe destacar que las Curitas están disponibles en distintos tamaños para poder cubrir completamente la lesión y/o en paños para poder cortarse a la medida necesaria. Se adecúan a todo tipo de piel.",
                             Discount = 30,
@@ -534,7 +534,7 @@ namespace Retail.Migrations
                         },
                         new
                         {
-                            ProductId = new Guid("64b39501-0307-41e6-9c27-086719c6a395"),
+                            ProductId = new Guid("424cf939-7e93-48fe-8d05-074a603abf55"),
                             CategoryId = 5,
                             Description = "Crema corporal",
                             Discount = 15,
@@ -544,7 +544,7 @@ namespace Retail.Migrations
                         },
                         new
                         {
-                            ProductId = new Guid("c87ad427-7ced-40a5-873f-b56383115515"),
+                            ProductId = new Guid("c501710a-0bb3-4747-85ae-35da53e90f76"),
                             CategoryId = 4,
                             Description = "El módulo de un cuerpo LE076 es un producto de la línea industrial, logrado por su acabado rústico y la combinación con lo natural de la materia prima. El diseño está compuesto por un cuerpo principal de melamina y patas de caño redondo curvado. Este mueble posee seis divisiones internas, dos cerradas con puertas y cuatro libres. Para la apertura de estas puertas nos encontramos con unos tiradores de color negro los cuales acompañan con la estetica discreta del diseño. El módulo está pensado en la multifuncionalidad, ya que puede ejercer varios usos dependiendo del ambiente en el que se lo utilice, en la cocina como despensero, en el living como contenedor, en el comedor como vajillero, en el estudio como biblioteca, en la habitación de los niños como porta juguetes, antebaño y baño como toallero y en el lavadero como organizador de elementos de limpieza o simplemente para objetos de decoración en el ambiente que más se desee. Este mueble viene desarmado y preparado para ensamblar de manera rápida y simple, por lo que dentro de la caja tenemos los correspondientes instructivos. Lo podes encontrar en las combinaciones de color atakama en su totalidad y las patas en color negras.",
                             Discount = 60,
@@ -554,7 +554,7 @@ namespace Retail.Migrations
                         },
                         new
                         {
-                            ProductId = new Guid("4ea65c08-f649-4895-97c0-a269d5eb8858"),
+                            ProductId = new Guid("d5a09807-317d-4391-ade4-074bdfdb3fec"),
                             CategoryId = 4,
                             Description = "Sofá cama Criqueto negro con patas frontales de plásticos. Patas de Metal negro y Espuma cubierto de PU.",
                             Discount = 25,
@@ -564,7 +564,7 @@ namespace Retail.Migrations
                         },
                         new
                         {
-                            ProductId = new Guid("8f0dda7e-80ad-4b3a-aa78-6740a65ff40b"),
+                            ProductId = new Guid("2600e46f-16e1-4f9f-8337-a3f627363ca7"),
                             CategoryId = 2,
                             Description = "Notebook",
                             Discount = 55,
@@ -574,7 +574,7 @@ namespace Retail.Migrations
                         },
                         new
                         {
-                            ProductId = new Guid("9d1a253a-4045-4d2a-9828-558e6c8ecf54"),
+                            ProductId = new Guid("a3c49207-b84a-46e4-abd5-f40ba3c61ea4"),
                             CategoryId = 2,
                             Description = "Control Inalámbrico DualSense™, Almacenamiento 825GB SSD, Base, Cable HDMI®, Cable AC, Cable USB, Manuales, ASTRO’s PLAYROOM (Juego pre-instalado. La consola puede necesitar actualizarse a la última versión de software disponible. Se requiere una conexión a Internet.)",
                             Discount = 45,
@@ -584,7 +584,7 @@ namespace Retail.Migrations
                         },
                         new
                         {
-                            ProductId = new Guid("a8bc514f-3cc8-4e35-a776-7ad7158bcb16"),
+                            ProductId = new Guid("7a7ad2ff-49c1-4207-ab03-5d54458e4b70"),
                             CategoryId = 2,
                             Description = "Cargador | Data Cable | Guia de Inicio Rapido | Eject Pin",
                             Discount = 20,
@@ -594,7 +594,7 @@ namespace Retail.Migrations
                         },
                         new
                         {
-                            ProductId = new Guid("9425440a-c315-44ed-a383-2a9e284f0ef0"),
+                            ProductId = new Guid("d10c1000-dee6-49db-87f6-f772028282e2"),
                             CategoryId = 2,
                             Description = "Celular libre",
                             Discount = 30,

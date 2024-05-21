@@ -59,7 +59,7 @@ public class SaleController : ControllerBase
     {
         try
         {   
-            var result = await _saleServices.GetSaleDetails(id);
+            var result = await _saleServices.GetSaleById(id);
             return new JsonResult(result){StatusCode = 200};
         }
         catch (NotFoundException ex)

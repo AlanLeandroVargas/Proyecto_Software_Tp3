@@ -51,8 +51,8 @@ public class RetailContext : DbContext
             entity.Property(pd => pd.Description).HasMaxLength(int.MaxValue);
             entity.Property(pr => pr.Price).IsRequired();
             entity.Property(pi => pi.ImageUrl).HasMaxLength(int.MaxValue);
-
         });
+        
         modelBuilder.Entity<SaleProduct>(entity =>{
             entity.ToTable("SaleProduct");
             entity.HasKey(e => e.ShoppingCartId);
