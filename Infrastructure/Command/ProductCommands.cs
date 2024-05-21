@@ -44,7 +44,7 @@ public class ProductCommands : IProductCommands
             product.Name = request.Name;
             product.Description = request.Description;
             product.Price = request.Price;
-            product.CategoryId = request.Category;
+            product.Category = request.Category;
             product.Discount = request.Discount;
             product.ImageUrl = request.ImageUrl;
             await _context.SaveChangesAsync();

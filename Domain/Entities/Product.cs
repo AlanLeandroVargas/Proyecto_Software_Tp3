@@ -11,7 +11,7 @@ public class Product
         Name = name;
         Description = description;
         Price = price;
-        CategoryId = categoryId;
+        Category = categoryId;
         Discount = discount;
         ImageUrl = imageurl;
     }
@@ -20,8 +20,8 @@ public class Product
     public string Name {get;set;}
     public string Description {get;set;}
     public decimal Price {get;set;}
-    public Category Category {get;set;}
-    public int CategoryId {get;set;}
+    public Category CategoryInstance {get;set;}
+    public int Category {get;set;}
     public int Discount {get;set;}
     public string ImageUrl {get;set;}
     public IList<SaleProduct>  SaleProducts {get;set;}

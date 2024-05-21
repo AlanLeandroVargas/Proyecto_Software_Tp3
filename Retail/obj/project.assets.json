@@ -4573,11 +4573,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Pc\\Desktop\\Uni\\Proyecto_Software\\Reentrega_Tp2\\Retail\\Retail.csproj",
+      "projectUniqueName": "C:\\Users\\Pc\\Desktop\\Uni\\Proyecto_Software\\Trabajo_Practico_3\\Retail\\Retail.csproj",
       "projectName": "Retail",
-      "projectPath": "C:\\Users\\Pc\\Desktop\\Uni\\Proyecto_Software\\Reentrega_Tp2\\Retail\\Retail.csproj",
+      "projectPath": "C:\\Users\\Pc\\Desktop\\Uni\\Proyecto_Software\\Trabajo_Practico_3\\Retail\\Retail.csproj",
       "packagesPath": "C:\\Users\\Pc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Pc\\Desktop\\Uni\\Proyecto_Software\\Reentrega_Tp2\\Retail\\obj\\",
+      "outputPath": "C:\\Users\\Pc\\Desktop\\Uni\\Proyecto_Software\\Trabajo_Practico_3\\Retail\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4594,8 +4594,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Pc\\Desktop\\Uni\\Proyecto_Software\\Reentrega_Tp2\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\Pc\\Desktop\\Uni\\Proyecto_Software\\Reentrega_Tp2\\Infrastructure\\Infrastructure.csproj"
+            "C:\\Users\\Pc\\Desktop\\Uni\\Proyecto_Software\\Trabajo_Practico_3\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Pc\\Desktop\\Uni\\Proyecto_Software\\Trabajo_Practico_3\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }

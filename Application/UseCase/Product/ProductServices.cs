@@ -34,7 +34,7 @@ public class ProductServices : IProductServices
             Name = request.Name,
             Description = request.Description,
             Price = request.Price,
-            CategoryId = request.Category,
+            Category = request.Category,
             Discount = request.Discount,
             ImageUrl = request.ImageUrl
         };
@@ -44,7 +44,7 @@ public class ProductServices : IProductServices
 
     private async Task<ProductResponse> CreateProductResponse(Product product)
     {
-        Category category = await _categoryServices.GetCategoryById(product.CategoryId);
+        Category category = await _categoryServices.GetCategoryById(product.Category);
         ProductResponse productResponse = new ProductResponse
         {
             Id = product.ProductId,
@@ -96,7 +96,7 @@ public class ProductServices : IProductServices
         List<ProductGetResponse> productGetResponses = new List<ProductGetResponse>();
         foreach(Product product in products)
         {
-            Category category = await _categoryServices.GetCategoryById(product.CategoryId);
+            Category category = await _categoryServices.GetCategoryById(product.Category);
             ProductGetResponse response = new ProductGetResponse
             {
                 Id = product.ProductId,
