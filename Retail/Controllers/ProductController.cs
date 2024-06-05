@@ -39,11 +39,11 @@ public class ProductController : ControllerBase
     [HttpGet]
     [ProducesResponseType(typeof(List<ProductGetResponse>), 200)]
     [ProducesResponseType(typeof(ApiError), 400)]  
-    public async Task<IActionResult> GetListProducts(string name = null, int offset = 0, int limit = 0)
+    public async Task<IActionResult> GetListProducts(string name = null, string category = null, int offset = 0, int limit = 0)
     {
         try
         {
-            var result = await _productServices.GetListProducts(name, offset, limit);
+            var result = await _productServices.GetListProducts(name, category, offset, limit);
             return new JsonResult(result){StatusCode = 200};
         }
         catch (Exception)

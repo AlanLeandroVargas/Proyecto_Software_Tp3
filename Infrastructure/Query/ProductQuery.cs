@@ -16,13 +16,17 @@ public class ProductQuery : IProductQuery
         _context = context;
     }
 
-    public async Task<List<Product>> GetListProducts(string name, int offset, int limit)
+    public async Task<List<Product>> GetListProducts(string name, string category, int offset, int limit)
     {
         IQueryable<Product> products = _context.Products;
+        if(category != null)
+        {
+            products = products.Where(p => p.CategoryInstance.Name.ToLower().Contains(category.ToLower()));
+        }
         if(name != null)
         {
             products = products.Where(p => p.Name.ToLower().Contains(name.ToLower()));
-        }
+        }        
         if(offset > 0)
         {
             products = products.Skip(offset);

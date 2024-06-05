@@ -42,7 +42,7 @@ public class RetailContext : DbContext
             entity.HasKey(e => e.ProductId);
             entity.HasOne<Category>(sc => sc.CategoryInstance)
                     .WithMany(ad => ad.Products)
-                    .HasForeignKey(ad => ad.CategoryInstance)
+                    .HasForeignKey(ad => ad.Category)
                     .IsRequired();
 
             entity.Property(p => p.Name)

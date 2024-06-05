@@ -24,7 +24,7 @@ public class SaleController : ControllerBase
     public async Task<IActionResult> CreateSale(SaleRequest request)
     {
         try
-        {               
+        {            
             var result = await _saleServices.CreateSale(request);
             return new JsonResult(result){StatusCode = 201};
         }

@@ -80,9 +80,9 @@ public class ProductServices : IProductServices
         return productResponse;
     }
 
-    public async Task<List<ProductGetResponse>> GetListProducts(string name, int offset, int limit)
+    public async Task<List<ProductGetResponse>> GetListProducts(string name, string category, int offset, int limit)
     {
-        List<Product> products = await _query.GetListProducts(name, offset, limit);
+        List<Product> products = await _query.GetListProducts(name, category, offset, limit);
         return await CreateListProductGetResponse(products);
     }
 
